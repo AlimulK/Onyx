@@ -1,19 +1,21 @@
+package Onyx;
 import javax.swing.JFrame;
+
+import Onyx.screens.Screen;
+import Onyx.screens.StartScreen;
+import asciiPanel.AsciiFont;
 import asciiPanel.AsciiPanel;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import screens.Screen;
-import screens.StartScreen;
 
 public class ApplicationMain extends JFrame implements KeyListener {
-    private static final long serialVersionUID = 1060623638149583738L;
 
     private AsciiPanel terminal;
     private Screen screen;
 
-    public ApplicationMain(){
+    public ApplicationMain() {
         super();
-        terminal = new AsciiPanel();
+        terminal = new AsciiPanel(80, 50, AsciiFont.TALRYTH_15_15);
         add(terminal);
         pack();
         screen = new StartScreen();
@@ -21,7 +23,7 @@ public class ApplicationMain extends JFrame implements KeyListener {
         repaint();
     }
 
-    public void repaint(){
+    public void repaint() {
         terminal.clear();
         screen.displayOutput(terminal);
         super.repaint();

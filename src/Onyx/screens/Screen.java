@@ -1,4 +1,4 @@
-package screens;
+package Onyx.screens;
 
 import asciiPanel.AsciiPanel;
 import java.awt.event.KeyEvent;
