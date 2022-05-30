@@ -3,8 +3,8 @@ import java.awt.Color;
 import asciiPanel.AsciiPanel;
 
 public enum Tile {
-    FLOOR('.', AsciiPanel.brightGreen),
-    WALL('#', AsciiPanel.cyan),
+    FLOOR('.', AsciiPanel.green),
+    WALL('#', AsciiPanel.yellow),
     BOUNDS('X', AsciiPanel.brightBlack);
 
     private char glyph;

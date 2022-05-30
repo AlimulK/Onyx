@@ -1,4 +1,5 @@
 package Onyx;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import Onyx.screens.Screen;
@@ -15,7 +16,7 @@ public class ApplicationMain extends JFrame implements KeyListener {
 
     public ApplicationMain() {
         super();
-        terminal = new AsciiPanel(80, 50, AsciiFont.TALRYTH_15_15);
+        terminal = new AsciiPanel(80, 50, AsciiFont.CP437_16x16);
         add(terminal);
         pack();
         screen = new StartScreen();
@@ -39,8 +40,13 @@ public class ApplicationMain extends JFrame implements KeyListener {
     public void keyTyped(KeyEvent e) { }
 
     public static void main(String[] args) {
+        // Adjusting the jframe
         ApplicationMain app = new ApplicationMain();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        app.setTitle("Onyx");
+        // placeholder icon
+        ImageIcon img = new ImageIcon("D:/code/java/Onyx/src/Onyx/icon.png");
+        app.setIconImage(img.getImage());
         app.setVisible(true);
     }
 }

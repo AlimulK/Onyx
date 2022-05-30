@@ -39,7 +39,7 @@ public class PlayScreen implements Screen {
 		
 		terminal.write('@', centerX - left, centerY - top);
 		
-		terminal.writeCenter("-- press [escape] to lose or [enter] to win --", 46);
+		terminal.writeCenter("-- press [escape] to lose or [enter] to win --", 45);
 	}
 
 	private void displayTiles(AsciiPanel terminal, int left, int top) {
