@@ -13,7 +13,7 @@ public enum Tile {
     private Color color;
     public Color color() { return color; }
 
-    Tile(char glyph, Color color) {
+    Tile(char glyph, Color color){
         this.glyph = glyph;
         this.color = color;
     }
