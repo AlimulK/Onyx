@@ -2,6 +2,8 @@ package Onyx.screens;
 
 import java.awt.event.KeyEvent;
 
+import Onyx.Creature;
+import Onyx.CreatureFactory;
 import Onyx.World;
 import Onyx.WorldBuilder;
 import asciiPanel.AsciiPanel;
@@ -12,6 +14,9 @@ public class PlayScreen implements Screen {
 	private int centerY;
 	private int screenWidth;
 	private int screenHeight;
+
+	CreatureFactory creatureFactory = new CreatureFactory(world);
+	Creature player = creatureFactory.newPlayer();
 	
 	public PlayScreen() {
 		screenWidth = 80;
@@ -37,7 +42,7 @@ public class PlayScreen implements Screen {
 		
 		displayTiles(terminal, left, top);
 		
-		terminal.write('@', centerX - left, centerY - top);
+		terminal.write(player.glyph(), player.x - left, player.y - top, player.color());
 		
 		terminal.writeCenter("-- press [escape] to lose or [enter] to win --", 45);
 	}
