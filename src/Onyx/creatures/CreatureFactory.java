@@ -1,5 +1,6 @@
-package Onyx;
+package Onyx.creatures;
 
+import Onyx.World;
 import asciiPanel.AsciiPanel;
 
 public class CreatureFactory {

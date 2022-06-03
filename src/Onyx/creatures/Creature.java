@@ -1,6 +1,8 @@
-package Onyx;
+package Onyx.creatures;
 
 import java.awt.Color;
+
+import Onyx.World;
 
 public class Creature {
     private World world;

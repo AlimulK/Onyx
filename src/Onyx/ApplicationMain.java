@@ -1,5 +1,5 @@
 package Onyx;
-import javax.swing.ImageIcon;
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 import Onyx.screens.Screen;
@@ -8,6 +8,8 @@ import asciiPanel.AsciiFont;
 import asciiPanel.AsciiPanel;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.IOException;
 
 public class ApplicationMain extends JFrame implements KeyListener {
 
@@ -39,14 +41,14 @@ public class ApplicationMain extends JFrame implements KeyListener {
 
     public void keyTyped(KeyEvent e) { }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Adjusting the jframe
         ApplicationMain app = new ApplicationMain();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // easily change the name and the icon
         app.setTitle("Onyx");
         // placeholder icon
-        ImageIcon img = new ImageIcon("D:/code/java/Onyx/src/Onyx/icon.png");
-        app.setIconImage(img.getImage());
+        app.setIconImage(ImageIO.read(new File("res/icon.png")));
         app.setVisible(true);
     }
 }

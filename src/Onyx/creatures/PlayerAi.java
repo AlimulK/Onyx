@@ -1,4 +1,6 @@
-package Onyx;
+package Onyx.creatures;
+
+import Onyx.Tile;
 
 public class PlayerAi extends CreatureAi {
 

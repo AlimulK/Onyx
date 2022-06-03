@@ -2,9 +2,13 @@ package Onyx;
 import java.awt.Color;
 import asciiPanel.AsciiPanel;
 
+
+
 public enum Tile {
-    FLOOR('.', AsciiPanel.green),
-    WALL('#', AsciiPanel.yellow),
+
+    // FLOOR('.', Colours.blu),
+    FLOOR('.', java.awt.Color.DARK_GRAY),
+    WALL('#', AsciiPanel.green),
     BOUNDS('X', AsciiPanel.brightBlack);
 
     private char glyph;
@@ -13,7 +17,7 @@ public enum Tile {
     private Color color;
     public Color color() { return color; }
 
-    Tile(char glyph, Color color){
+    Tile(char glyph, Color color) {
         this.glyph = glyph;
         this.color = color;
     }

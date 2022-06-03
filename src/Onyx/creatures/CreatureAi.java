@@ -1,4 +1,6 @@
-package Onyx;
+package Onyx.creatures;
+
+import Onyx.Tile;
 
 public class CreatureAi {
     protected Creature creature;
