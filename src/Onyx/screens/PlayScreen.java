@@ -14,18 +14,27 @@ public class PlayScreen implements Screen {
 	private int screenWidth;
 	private int screenHeight;
 	
-	public PlayScreen() {
+	public PlayScreen(){
 		screenWidth = 80;
 		screenHeight = 45;
 		createWorld();
+	  
 		CreatureFactory creatureFactory = new CreatureFactory(world);
-		player = creatureFactory.newPlayer();
+		createCreatures(creatureFactory);
 	}
 	
 	private void createWorld(){
 		world = new WorldBuilder(100, 100)
 					.makeCaves()
 					.build();
+	}
+
+	private void createCreatures(CreatureFactory creatureFactory){
+		player = creatureFactory.newPlayer();
+	  
+		for (int i = 0; i < 8; i++){
+			creatureFactory.newFungus();
+		}
 	}
 
 	public int getScrollX() { return Math.max(0, Math.min(player.x - screenWidth / 2, world.width() - screenWidth)); }

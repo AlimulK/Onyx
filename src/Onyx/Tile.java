@@ -8,7 +8,7 @@ public enum Tile {
 
     // FLOOR('.', Colours.blu),
     FLOOR('.', java.awt.Color.DARK_GRAY),
-    WALL('#', AsciiPanel.green),
+    WALL('#', AsciiPanel.yellow),
     BOUNDS('X', AsciiPanel.brightBlack);
 
     private char glyph;
